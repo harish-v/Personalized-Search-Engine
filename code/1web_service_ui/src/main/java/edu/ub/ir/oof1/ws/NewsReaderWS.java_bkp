@@ -1,0 +1,95 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package edu.ub.ir.oof1.ws;
+
+import edu.ub.ir.oof1.service.NewsService;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.UriInfo;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PUT;
+
+/**
+ * REST Web Service
+ *
+ * @author san
+ */
+@Path("/news")
+public class NewsReaderWS {
+
+    @Context
+    private UriInfo context;
+
+    /**
+     * Creates a new instance of NewsReaderWS
+     */
+    public NewsReaderWS() {
+    }
+
+    /**
+     * Retrieves All News Articles
+     *
+     * @return an instance of java.lang.String
+     */
+    /*
+    @GET
+    @Produces("application/json")
+    public String getAllNews() {
+        //TODO return proper representation object
+        return "{\"newsId\":\"ALL\"}";
+
+    }
+    */
+    
+    @GET
+    @Produces("application/json")
+    public String getAllNewsTest() {
+        //TODO return proper representation object
+        NewsService news_service = new NewsService();
+        news_service.getNewsArrayForUI_InJSON("buffalo");
+        return "{\"newsId\":\"ALL\"}";
+
+    }
+    
+    @GET
+    @Path("/{news_id}")
+    @Produces("application/json")
+    public String getSingleNewsArticleTest(@PathParam("news_id") String news_id) {
+        //TODO return proper representation object
+        System.out.println("\n\nNews ID hit from UI : " + news_id + "\n\n");
+        NewsService news_service = new NewsService();
+        
+        return news_service.getNewsObjectForUI_InJSON("news_id:"+news_id);
+
+    }
+    
+    /**
+     * Retrieves single News Article for given newsId
+     *
+     * @return an instance of java.lang.String
+     */
+    /*
+    @GET
+    @Path("/{newsId}")
+    @Produces("application/json")
+    public String getNews(@PathParam("newsId") String newsId) {
+        return "{\"newsId\":\"" + newsId + "\"}";
+    }
+    */
+    /**
+     * PUT method for updating or creating an instance of NewsReaderWS
+     *
+     * @param content representation for the resource
+     * @return an HTTP response with content of the updated or created resource.
+     */
+    @PUT
+    @Consumes("application/json")
+    public void putJson(String content) {
+    }
+}

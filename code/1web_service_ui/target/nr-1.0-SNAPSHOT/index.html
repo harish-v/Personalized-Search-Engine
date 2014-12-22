@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Nuntius</title>
+
+
+<script src="js/jquery.js" type="text/javascript"></script>
+<!--<script src="js/fb.js" type="text/javascript"></script>-->
+<script src="js/news.js" type="text/javascript"></script>
+
+
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="Web Page Maker">
+<style type="text/css">
+/*----------Text Styles----------*/
+.ws6 {font-size: 8px;}
+.ws7 {font-size: 9.3px;}
+.ws8 {font-size: 11px;}
+.ws9 {font-size: 12px;}
+.ws10 {font-size: 13px;}
+.ws11 {font-size: 15px;}
+.ws12 {font-size: 16px;}
+.ws14 {font-size: 19px;}
+.ws16 {font-size: 21px;}
+.ws18 {font-size: 24px;}
+.ws20 {font-size: 27px;}
+.ws22 {font-size: 29px;}
+.ws24 {font-size: 32px;}
+.ws26 {font-size: 35px;}
+.ws28 {font-size: 37px;}
+.ws36 {font-size: 48px;}
+.ws48 {font-size: 64px;}
+.ws72 {font-size: 96px;}
+.wpmd {font-size: 13px;font-family: Arial,Helvetica,Sans-Serif;font-style: normal;font-weight: normal;}
+/*----------Para Styles----------*/
+DIV,UL,OL /* Left */
+{
+ margin-top: 0px;
+ margin-bottom: 0px;
+}
+</style>
+
+<style type="text/css">
+div#container
+{
+	position:relative;
+	width: 1157px;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align:left; 
+}
+body {text-align:center;margin:0}
+</style>
+
+</head>
+<body background="images/black_2.jpg" bgProperties="fixed" Text="#FFCC99" style="background-attachment:fixed;" onload="onLoadHome();">
+<div id="container">
+<div id="text1" style="position:absolute; overflow:hidden; left:60px; top:28px; width:109px; height:40px; z-index:0">
+<div class="wpmd">
+<div><font color="#FFCC00" face="Andalus" class="ws16"><B><U>NunTiuS</U></B></font></div>
+</div></div>
+
+<div id="formimage1" style="position:absolute; left:1022px; top:32px; z-index:1"><input type="image" id="b_login" width="33" height="33" src="images/1417358996_95894.ico" onclick="button_userLogin();"></div>
+<div id="hr1" style="position:absolute; overflow:hidden; left:1px; top:83px; width:1152px; height:17px; z-index:2">
+<hr size=2 width=1152>
+</div>
+
+<input id="searchBar" type="text" style="position:absolute;width:399px;left:198px;top:36px;z-index:3" onkeypress="onKeyPressSuggest();">
+
+
+<div id="iFrame3d" style="position:absolute; left:19px; top:117px; z-index:4">
+
+
+
+<!--<iframe id="iFrame3" width="753" height="544" src="iframe3.html" scrolling="yes" frameborder="0"></iframe>-->
+<!--Results Div-->
+<div id="resultDiv" style="overflow-y: scroll; height:544; width=753;">
+<!---->
+
+<ul id="result"></ul>
+
+<!---->
+</div>
+</div>
+
+<div id="text2" style="position:absolute; overflow:hidden; left:761px; top:34px; width:220px; height:40px; z-index:5">
+<div class="wpmd">
+<div align=center><font face="Andalus" class="ws14"><!-- dispName --></font></div>
+</div></div>
+
+<div id="hr2" style="position:absolute; overflow:hidden; left:0px; top:682px; width:1157px; height:17px; z-index:6">
+<hr size=2 width=1157>
+</div>
+<!--Results Div-->
+
+
+<div id="iFrame2d" style="position:absolute; left:781px; top:118px; z-index:7">
+
+<!--<iframe id="iFrame2" width="359" height="543" src="iframe2.html" scrolling="yes" frameborder="0"></iframe>-->
+
+<!--Pref Div-->
+<div id="prefDiv" width="359" height="543" style="display:none;">
+
+<div id="text4" style="position:absolute; overflow:hidden; left:33px; top:5px; width:194px; height:34px; z-index:7">
+<div class="wpmd">
+<div align=center><font color="#99CCFF" face="Sylfaen" class="ws12"><label id="messageLabel" onclick="closeLoginDiv();"> X close </label></font></div>
+</div></div>
+
+
+<div id="image1" style="position:absolute; overflow:hidden; left:75px; top:38px; width:64px; height:64px; z-index:11">
+
+<ul id="pref" align="center">
+<li>Preferences:</li>
+</ul>
+
+</div>
+
+</div>
+<!--Pref Div-->
+
+
+
+<!--Login Div-->
+<div id="loginDiv" width="359" height="543" style="display:none;">
+
+<!---->
+<div id="container">
+<div id="text1" style="position:absolute; overflow:hidden; left:30px; top:132px; width:44px; height:28px; z-index:0">
+<div class="wpmd">
+<div><font face="Andalus" class="ws12">Email</font></div>
+</div></div>
+
+<div id="text2" style="position:absolute; overflow:hidden; left:109px; top:266px; width:66px; height:32px; z-index:3">
+<div class="wpmd">
+<div><font face="Andalus" class="ws12">Sign Up</font></div>
+</div></div>
+
+<div id="text3" style="position:absolute; overflow:hidden; left:105px; top:92px; width:66px; height:32px; z-index:5">
+<div class="wpmd">
+<div><font face="Andalus" class="ws12">Sign In</font></div>
+</div></div>
+
+<div id="text4" style="position:absolute; overflow:hidden; left:33px; top:5px; width:194px; height:34px; z-index:7">
+<div class="wpmd">
+<div align=center><font color="#99CCFF" face="Sylfaen" class="ws12"><label id="messageLabel" onclick="closeLoginDiv();"> X close </label></font></div>
+</div></div>
+
+<div id="hr1" style="position:absolute; overflow:hidden; left:28px; top:73px; width:204px; height:15px; z-index:8">
+<hr size=2 width=204>
+</div>
+
+<div id="text5" style="position:absolute; overflow:hidden; left:21px; top:160px; width:65px; height:28px; z-index:9">
+<div class="wpmd">
+<div><font face="Andalus" class="ws12">Password</font></div>
+</div></div>
+
+<div id="formimage5" style="position:absolute; left:152px; top:36px; z-index:10"><input type="image" id="b_fb" width="37" height="37" src="images/1417393823_221698.ico" onclick="signUpFB();" scope="public_profile,email"></div>
+<div id="image1" style="position:absolute; overflow:hidden; left:85px; top:23px; width:64px; height:64px; z-index:11"><img src="images/1417393817_100242.ico" alt="" title="" border=0 width=64 height=64></div>
+
+<form name="signin" method="POST" style="margin:0px">
+<input id="email" type="text" style="position:absolute;width:141px;left:91px;top:130px;z-index:1">
+<input id="pass" type="password" style="position:absolute;width:141px;left:91px;top:159px;z-index:2">
+<div id="formimage2" style="position:absolute; left:119px; top:193px; z-index:6"><input type="image" id="b_in" width="29" height="29" src="images/1417360103_63128.ico" onclick="signIn();"></div>
+</form>
+
+<div id="text7" style="position:absolute; overflow:hidden; left:30px; top:305px; width:44px; height:28px; z-index:13">
+<div class="wpmd">
+<div><font face="Andalus" class="ws12">Email</font></div>
+</div></div>
+
+<div id="text8" style="position:absolute; overflow:hidden; left:21px; top:333px; width:65px; height:28px; z-index:17">
+<div class="wpmd">
+<div><font face="Andalus" class="ws12">Password</font></div>
+</div></div>
+
+<div id="text9" style="position:absolute; overflow:hidden; left:23px; top:363px; width:62px; height:28px; z-index:18">
+<div class="wpmd">
+<div><font face="Andalus" class="ws12">Confirm</font></div>
+</div></div>
+
+<div id="hr2" style="position:absolute; overflow:hidden; left:29px; top:243px; width:200px; height:15px; z-index:19">
+<hr size=2 width=200>
+</div>
+
+<form name="signup" method="GET" style="margin:0px">
+<div id="formimage1" style="position:absolute; left:121px; top:397px; z-index:4"><input type="image" id="b_up" width="29" height="29" src="images/1417360103_63128.ico" onclick="signUp();"></div>
+<input id="email1" type="text" style="position:absolute;width:141px;left:91px;top:303px;z-index:14">
+<input id="pass1" type="password" style="position:absolute;width:141px;left:91px;top:332px;z-index:15">
+<input id="pass2" type="password" style="position:absolute;width:141px;left:91px;top:362px;z-index:16">
+</form>
+</div>
+<!---->
+
+</div>
+</div>
+
+<!--Login Div-->
+
+
+<div id="formimage2" style="position:absolute; left:1064px; top:33px; z-index:8"><input type="image" id="b_logout" width="36" height="36" src="images/Graphicloads-Polygon-Inside.ico" onclick="button_userLogout();"></div>
+<div id="formimage3" style="position:absolute; left:984px; top:31px; z-index:9"><input type="image" id="b_pref" width="34" height="34" src="images/1417404477_95923.ico" onclick="button_userPref();"></div>
+<div id="formimage4" style="position:absolute; left:609px; top:30px; z-index:10"><input type="image" id="b_search" width="37" height="37" src="images/1417407574_330396.ico" onclick="button_search();"></div>
+</div>
+
+</body>
+</html>
